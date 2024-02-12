@@ -20,11 +20,13 @@ describe('HomeComponent', () => {
       imports: [CommonModule, HomeComponent],
       //providers son para servicios
       providers: [],
-    });
+    }).compileComponents();
     //crea el componente
     fixture = TestBed.createComponent(HomeComponent);
     //crea una instancia del componente
     component = fixture.componentInstance;
+    //detecta los cambios en el componente, ciclo de vida de angular
+    fixture.detectChanges();
   });
 
   //afterEach es una función que se ejecuta después de cada test, se ejecuta
